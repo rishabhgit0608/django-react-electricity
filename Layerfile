@@ -37,7 +37,7 @@ RUN echo "ALLOWED_HOSTS = ['localhost']" >> settings.py
 
 RUN python3 -m virtualenv venv
 
-pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 # Run migrations (implicitly checks that they work)
 RUN python3 manage.py makemigrations && python3 manage.py migrate
