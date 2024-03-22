@@ -35,6 +35,8 @@ RUN echo 'DATABASES={"default": {\
 # Allow local connections to the site
 RUN echo "ALLOWED_HOSTS = ['localhost']" >> settings.py
 
+RUN pip3 install virtualenv
+
 RUN python3 -m virtualenv venv
 
 RUN pip3 install -r requirements.txt
